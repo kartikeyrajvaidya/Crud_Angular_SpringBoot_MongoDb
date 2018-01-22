@@ -1,5 +1,6 @@
 package com.springBootApp.simpleApp.controllers;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +25,10 @@ public class StudentController {
 	}
 	
 	@GetMapping("/student/{id}")
-	public Student getStudentByRollNo(@PathVariable("id") int id ) {
+	
+	public Student getStudentByRollNo(@PathVariable("id") String id ) {
 		
-		return studentRepository.findOne(Integer.toString(id)) ;
+		return studentRepository.findOne(id) ;
 		
 	}
 	

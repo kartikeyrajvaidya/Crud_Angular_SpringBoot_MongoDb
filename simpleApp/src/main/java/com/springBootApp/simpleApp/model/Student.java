@@ -1,5 +1,7 @@
 package com.springBootApp.simpleApp.model;
 
+import java.math.BigInteger;
+
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -11,7 +13,7 @@ public class Student {
 	
 	
 	@Id
-	int rollNo ;
+	String rollNo ;
 	
 	@NotBlank
 	String name;
@@ -23,11 +25,11 @@ public class Student {
 	@NotBlank
 	int attendence;
 
-	public int getRollNo() {
+	public String getRollNo() {
 		return rollNo;
 	}
 
-	public void setRollNo(int rollNo) {
+	public void setRollNo(String rollNo) {
 		this.rollNo = rollNo;
 	}
 
